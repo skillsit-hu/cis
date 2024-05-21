@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - db
+    ports:
+      - '8080:80'
+    environment:
+      PMA_HOST: 'db'
+      PMA_USER: 'root'
+      PMA_PASSWORD: 'toor'
+      PMA_ARBITRARY: 1
+
+  db:
+    image: mariadb:latest
+    environment:
+      - MARIADB_ROOT_PASSWORD=toor
+      - MARIADB_DATABASE=cis
+      - MARIADB_ROOT_HOST=%
+    ports:
+      - '3306:3306'
+    volumes:
+      - /var/lib/mysql
+      - ./db:/docker-entrypoint-initdb.d
+
+  cis:
+    depends_on:
+      - db
+    build:
+      context: cis
+      dockerfile: Dockerfile
+    ports:
+      - '9090:80'
+    volumes:
+      - ./cis/content:/app/content

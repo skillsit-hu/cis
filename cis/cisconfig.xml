@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CISConfig>
+    <CollectData>true</CollectData>
+    <Country>HU</Country>
+    <Server>
+        <Key>315c9bb0-b148-43a3-bf75-b7581f74ba3e</Key>
+        <Port>80</Port>
+        <MaxUpload>10000000</MaxUpload>
+        <Version>5.0.5</Version>
+        <Build>877</Build>
+        <Shutdown>
+            <Port>8005</Port>
+            <Message>shutdownCIS</Message>
+        </Shutdown>
+    </Server>
+    <Instance>
+        <Name>cis</Name>
+        <CompLevel>NOT_SPECIFIED</CompLevel>
+        <ContextPath>/</ContextPath>
+        <Database>
+            <Type>mysql</Type>
+            <Host>db</Host>
+            <Port>3306</Port>
+            <DatabaseName>cis</DatabaseName>
+            <Username>root</Username>
+            <Password>toor</Password>
+            <UseSSL>false</UseSSL>
+            <JDBCProperties></JDBCProperties>
+        </Database>
+    </Instance>
+</CISConfig>

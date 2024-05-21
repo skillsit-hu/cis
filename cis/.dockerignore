@@ -1,0 +1,4 @@
+*.exe
+jvm
+logs
+startup.l4j.ini
