@@ -5,7 +5,7 @@ git clone https://github.com/skillsit-hu/cis.git
 cd cis
 docker compose up -d
 ```
-#### Admin User and Password
+### Admin User and Password
 ``admin:admin``
 
 ### Apps
