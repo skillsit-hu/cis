@@ -2,7 +2,7 @@
 ## Setup
 ```sh
 git clone https://github.com/skillsit-hu/cis.git
-cd cis-docker
+cd cis
 docker compose up -d
 ```
 
