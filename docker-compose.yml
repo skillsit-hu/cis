@@ -12,6 +12,7 @@ services:
       PMA_USER: 'root'
       PMA_PASSWORD: 'toor'
       PMA_ARBITRARY: 1
+    restart: always
 
   db:
     image: mariadb:latest
@@ -22,8 +23,9 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - /var/lib/mysql
+      - ./mysql:/var/lib/mysql
       - ./db:/docker-entrypoint-initdb.d
+    restart: always
 
   cis:
     depends_on:
@@ -35,3 +37,4 @@ services:
       - '9090:80'
     volumes:
       - ./cis/content:/app/content
+    restart: always

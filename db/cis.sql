@@ -199,7 +199,7 @@ INSERT INTO `config` (`config_key`, `value`) VALUES
 ('BRONZE_MEDAL_POINTS', '2'),
 ('BUILD_NUM', '877'),
 ('BUILD_VERSION', '5.0.5'),
-('COMPETITION_NAME', 'cis'),
+('COMPETITION_NAME', 'Competition Information System (CIS)'),
 ('COMPETITOR_SORT', 'org.worldskills.cis.model.person.ParticipantNameComparator'),
 ('CONTENT_PATH', '/app/content/cis/'),
 ('DEFAULT_LANGUAGE', 'en'),
